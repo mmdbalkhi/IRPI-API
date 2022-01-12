@@ -16,13 +16,19 @@ $ curl IRPI.com.api/v1/random
 
 ```json
 {
-  "status": "ok",
-  "image_name": "example",
-  "image_path": "IRPI.com/img/place",
-  "location": "example location",
-  "photographer": "the photographer",
-  "description": "a description"
+  "data": {
+    "description": "description", 
+    "location": "location", 
+    "name": "example", 
+    "photographer": "the photographer", 
+    "sender": "sender"
+  }, 
+  "id": "uuid4", 
+  "img name": "example", 
+  "img url": "http://localhost:5000/img/example/image.jpg", 
+  "status": "ok"
 }
+
 ```
 
 ### Find img by name
@@ -33,13 +39,19 @@ $ curl IRPI.com/v1/find/example
 
 ```json
 {
-  "status": "ok",
-  "image_name": "example",
-  "image_path": "api.com/img/place",
-  "location": "example location",
-  "photographer": "the photographer",
-  "description": "a description"
+  "data": {
+    "description": "description", 
+    "location": "location", 
+    "name": "example", 
+    "photographer": "the photographer", 
+    "sender": "sender"
+  }, 
+  "id": "uuid4", 
+  "img name": "example", 
+  "img url": "http://localhost:5000/img/example/image.jpg", 
+  "status": "ok"
 }
+
 ```
 
 ## Photos

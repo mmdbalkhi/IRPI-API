@@ -25,14 +25,14 @@ def generate_img_table(img_dir=None) -> str:
 """
     items = os.listdir(img_dir)
     items.sort()
-    
+
     for item in items:
-        if item[0] not in [".", "_"] and os.path.exists(img_dir + "/" + item + '/image.png'):
+        if item[0] not in [".", "_"] and os.path.exists(img_dir + "/" + item + '/image.jpg'):
             try:
                 with open(img_dir + '/' + item + '/info.json') as file:
                     json_file = load(file)
 
-                img_path = f"{repo_address}img/{item}.png"
+                img_path = f"{repo_address}img/{item}.jpg"
 
                 output += f'| {json_file["name"]} | {json_file["location"]} '
                 output += f'| {json_file["photographer"]} | {json_file["sender"]} '
@@ -67,13 +67,19 @@ $ curl IRPI.com.api/v1/random
 
 ```json
 {
-  "status": "ok",
-  "image_name": "example",
-  "image_path": "IRPI.com/img/place",
-  "location": "example location",
-  "photographer": "the photographer",
-  "description": "a description"
+  "data": {
+    "description": "description", 
+    "location": "location", 
+    "name": "example", 
+    "photographer": "the photographer", 
+    "sender": "sender"
+  }, 
+  "id": "uuid4", 
+  "img name": "example", 
+  "img url": "http://localhost:5000/img/example/image.jpg", 
+  "status": "ok"
 }
+
 ```
 
 ### Find img by name
@@ -84,13 +90,19 @@ $ curl IRPI.com/v1/find/example
 
 ```json
 {
-  "status": "ok",
-  "image_name": "example",
-  "image_path": "api.com/img/place",
-  "location": "example location",
-  "photographer": "the photographer",
-  "description": "a description"
+  "data": {
+    "description": "description", 
+    "location": "location", 
+    "name": "example", 
+    "photographer": "the photographer", 
+    "sender": "sender"
+  }, 
+  "id": "uuid4", 
+  "img name": "example", 
+  "img url": "http://localhost:5000/img/example/image.jpg", 
+  "status": "ok"
 }
+
 ```
 """
 
