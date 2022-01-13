@@ -1,0 +1,6 @@
+-r requirements.in
+-r docs.in
+-r test.in
+pip-tools
+pre-commit
+tox
