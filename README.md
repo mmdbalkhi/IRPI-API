@@ -6,6 +6,20 @@
 
 IRPI is a RESTful API. your can download Iran beautiful Place img.
 
+## Run
+
+first plase install requirements:
+
+```sh
+$ pip install -r requirements/requirements.txt
+```
+
+and run the app:
+
+```
+$ python app/main.py
+```
+
 ## Example
 
 ### Find Random img
@@ -28,7 +42,6 @@ $ curl IRPI.com.api/v1/random
   "img url": "http://localhost:5000/img/example/image.jpg",
   "status": "ok"
 }
-
 ```
 
 ### Find img by name
@@ -51,7 +64,6 @@ $ curl IRPI.com/v1/find/example
   "img url": "http://localhost:5000/img/example/image.jpg",
   "status": "ok"
 }
-
 ```
 
 ## Photos
