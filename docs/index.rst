@@ -26,15 +26,15 @@ Find Random img ::
 
    {
    "data": {
-      "description": "description", 
-      "location": "location", 
-      "name": "example", 
-      "photographer": "the photographer", 
+      "description": "description",
+      "location": "location",
+      "name": "example",
+      "photographer": "the photographer",
       "sender": "sender"
-   }, 
-   "id": "uuid4", 
-   "img name": "example", 
-   "img url": "http://localhost:5000/img/example/image.jpg", 
+   },
+   "id": "uuid4",
+   "img name": "example",
+   "img url": "http://localhost:5000/img/example/image.jpg",
    "status": "ok"
    }
 
@@ -46,16 +46,14 @@ Find img by name ::
 
    {
    "data": {
-      "description": "description", 
-      "location": "location", 
-      "name": "example", 
-      "photographer": "the photographer", 
+      "description": "description",
+      "location": "location",
+      "name": "example",
+      "photographer": "the photographer",
       "sender": "sender"
-   }, 
-   "id": "uuid4", 
-   "img name": "example", 
-   "img url": "http://localhost:5000/img/example/image.jpg", 
+   },
+   "id": "uuid4",
+   "img name": "example",
+   "img url": "http://localhost:5000/img/example/image.jpg",
    "status": "ok"
    }
-
-
