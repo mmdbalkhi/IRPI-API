@@ -2,7 +2,7 @@
 a script for Auto genarate README file
 """
 import os
-from json import load
+from json import load as json_load
 from os import listdir
 
 repo_address = "https://github/mmdbakhi/IRPI/"
@@ -30,7 +30,7 @@ def generate_img_table(img_dir=None) -> str:
         ):
             try:
                 with open(img_dir + "/" + item + "/info.json") as file:
-                    json_file = load(file)
+                    json_file = json_load(file)
 
                 img_path = f"{repo_address}img/{item}.jpg"
 
@@ -63,7 +63,6 @@ IRPI is a RESTful API. your can download Iran beautiful Place img.
 first plase install requirements:
 
 ```sh
-$ pip install -r requirements/requirements.txt
 $ pip install -e .
 ```
 

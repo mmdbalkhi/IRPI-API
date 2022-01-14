@@ -11,7 +11,6 @@ IRPI is a RESTful API. your can download Iran beautiful Place img.
 first plase install requirements:
 
 ```sh
-$ pip install -r requirements/requirements.txt
 $ pip install -e .
 ```
 
