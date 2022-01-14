@@ -23,7 +23,7 @@ app = Flask(__name__, static_folder="img")
 
 app.secret_key = "dev"
 
-image_path = os.getcwd() + "/app/img/"
+image_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
 
 
 def find_img_date(img_name: str) -> Dict:

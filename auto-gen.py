@@ -7,7 +7,7 @@ from os import listdir
 
 repo_address = "https://github/mmdbakhi/IRPI/"
 project_name = "IRPI"
-main_tree = os.getcwd()
+main_tree = os.path.dirname(os.path.abspath(__file__))
 
 
 def generate_img_table(img_dir=None) -> str:
