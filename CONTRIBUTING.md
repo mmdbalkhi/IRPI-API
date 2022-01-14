@@ -105,6 +105,7 @@ $ python -m pip install --upgrade pip setuptools
 
 ```sh
 $ pip install -r requirements/dev.txt
+$ pip install -e .
 ```
 
 - Install the pre-commit hooks.
