@@ -1,3 +1,14 @@
+"""
+    IRPI
+    ~~~~~
+
+    An api based on the flask. this API Publish
+    images from  the Iran beautiful places
+
+    :license: GPL-3
+
+    * The Images have copyright license *
+"""
 from flask import Flask
 
 
