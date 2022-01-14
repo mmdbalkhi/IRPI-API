@@ -12,12 +12,29 @@ first plase install requirements:
 
 ```sh
 $ pip install -r requirements/requirements.txt
+$ pip install -e .
 ```
 
 and run the app:
 
+- bash
+
+```sh
+$ export FLASK_APP=src/main.py
+$ flask run
 ```
-$ python app/main.py
+
+- cmd
+
+```cmd
+> set FLASK_APP=hello
+> flask run
+```
+
+- powershell
+```
+> $env:FLASK_APP = "hello"
+> flask run
 ```
 
 ## Example

@@ -15,28 +15,26 @@ from json import load
 from typing import Dict
 from uuid import uuid4
 
-from flask import Flask
+from flask import Blueprint
 from flask import jsonify
 from flask import request
 
-app = Flask(__name__, static_folder="img")
-
-app.secret_key = "dev"
-
 image_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
+
+bp = Blueprint("v1", __name__)
 
 
 def find_img_date(img_name: str) -> Dict:
-
+    path = f"{image_path}{img_name}"
     try:
-        with open(f"{image_path}{img_name}/info.json") as file:
+        with open(f"{path}/info.json") as file:
             return load(file)
     except ValueError:
         return
 
 
-@app.route("/v1/random", methods=["GET"])
-def v1_random():
+@bp.route("/v1/random", methods=["GET"])
+def find_random():
 
     img_name = random.choice(os.listdir(image_path))
     img_data = find_img_date(img_name)
@@ -56,8 +54,8 @@ def v1_random():
     )
 
 
-@app.route("/v1/find/<img_name>", methods=["GET"])
-def v1_by_name(img_name):
+@bp.route("/v1/find/<img_name>", methods=["GET"])
+def find_by_name(img_name):
 
     if os.path.exists(f"{image_path}{img_name}/image.jpg"):
         img_data = find_img_date(img_name)
@@ -86,7 +84,3 @@ def v1_by_name(img_name):
         ),
         404,
     )
-
-
-if __name__ == "__main__":
-    app.run("127.0.0.1", 5000, debug=False)
