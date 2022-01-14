@@ -11,7 +11,7 @@
 """
 import os
 import random
-from json import load
+from json import load as json_load
 from typing import Dict
 from uuid import uuid4
 
@@ -28,7 +28,7 @@ def find_img_date(img_name: str) -> Dict:
     path = f"{image_path}{img_name}"
     try:
         with open(f"{path}/info.json") as file:
-            return load(file)
+            return json_load(file)
     except ValueError:
         return
 
