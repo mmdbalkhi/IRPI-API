@@ -32,7 +32,4 @@ def create_app(test_config=None):
 
     app.register_blueprint(v1.bp)
 
-    app.add_url_rule("/v1/random", endpoint="find_random")
-    app.add_url_rule("/v1/find/<img_name>", endpoint="find_by_name")
-
     return app
