@@ -1,3 +1,4 @@
-include LICENSE.rst
-graft app/static/img
+include LICENSE
+graft IRIP/img
+graft tests
 global-exclude *.pyc
