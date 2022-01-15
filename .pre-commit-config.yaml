@@ -6,13 +6,10 @@ repos:
     hooks:
       - id: pyupgrade
         args: ["--py36-plus"]
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.6.0
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: "" # Use the revision sha / tag you want to point at
     hooks:
-      - id: reorder-python-imports
-        name: Reorder Python imports (src, tests)
-        files: "^(?!examples/)"
-        args: ["--application-directories", "src"]
+      - id: isort
   - repo: https://github.com/psf/black
     rev: 21.12b0
     hooks:
