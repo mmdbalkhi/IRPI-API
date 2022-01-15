@@ -84,3 +84,11 @@ def find_by_name(img_name):
         ),
         404,
     )
+
+
+@bp.errorhandler(500)
+def internal_server_error(e):
+    return (
+        jsonify({"status": "failed", "msg": "500 Internal Server Error"}),
+        500,
+    )
