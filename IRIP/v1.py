@@ -15,9 +15,7 @@ from json import load as json_load
 from typing import Dict
 from uuid import uuid4
 
-from flask import Blueprint
-from flask import jsonify
-from flask import request
+from flask import Blueprint, jsonify, request
 
 image_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
 

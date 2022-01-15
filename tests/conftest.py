@@ -1,4 +1,5 @@
 import pytest
+
 from IRIP import create_app
 
 
