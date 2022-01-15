@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 import sys
 
-from setuptools import setup
+from setuptools import setup  # type: ignore
 
 if sys.version_info < (3, 6, 0):
     sys.exit(
@@ -9,5 +11,4 @@ if sys.version_info < (3, 6, 0):
         "for installation instructions."
     )
 
-if __name__ == "__main__":
-    setup()
+setup()
