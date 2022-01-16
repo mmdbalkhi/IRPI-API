@@ -5,7 +5,7 @@ import os
 from json import load as json_load
 from os import listdir
 
-repo_address = "https://github/mmdbakhi/IRPI/"
+repo = "https://raw.githubusercontent.com/mmdbalkhi/IRPI-API/main"
 project_name = "IRPI"
 main_tree = os.path.dirname(os.path.abspath(__file__))
 
@@ -32,7 +32,7 @@ def generate_img_table(img_dir=None) -> str:
                 with open(img_dir + "/" + item + "/info.json") as file:
                     json_file = json_load(file)
 
-                img_path = f"{repo_address}img/{item}.jpg"
+                img_path = f"{repo}/IRIP/img/{item}/image.jpg"
 
                 output += f'| {json_file["name"]} |'
                 output += f' {json_file["location"]} |'
