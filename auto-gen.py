@@ -56,13 +56,30 @@ readme = """<!-- auto generated dont edit-->
 
 > IRan Place Img API
 
-IRPI is a RESTful API. your can download Iran beautiful Place img.
+IRPI is a RESTful API. you can download Iran's beautiful Places image.
 
 ## Run
 
-first plase install requirements:
+Please first create a virtual environment with the following command.
+
+### MacOs/Linux
 
 ```sh
+$ python3 -m venv env
+$ . env/bin/activate
+```
+
+### Windwons
+
+```batch
+> py -3 -m venv env
+> env\\Scripts\activate
+```
+
+then install requirements:
+
+```sh
+$ pip install -r requirements/requirements.txt
 $ pip install -e .
 ```
 
