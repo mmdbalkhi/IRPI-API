@@ -13,7 +13,7 @@ def test_find_random():
     assert response["status"] == "ok"
 
 
-def test_find_by_name():
+def test_find_by_name_404():
 
     response = json.loads(client.get("/v1/find/example").data)
 
@@ -21,7 +21,10 @@ def test_find_by_name():
     assert response["status"] == "failed"
     assert response["msg"] == "img not exists"
 
-    response = json.loads(client.get("/v1/find/iran_map").data)
 
-    assert client.get("/v1/find/iran_map").status_code == 200
+def test_find_by_name_200():
+
+    response = json.loads(client.get("/v1/find/azadi_tower").data)
+
+    assert client.get("/v1/find/azadi_tower").status_code == 200
     assert response["status"] == "ok"
