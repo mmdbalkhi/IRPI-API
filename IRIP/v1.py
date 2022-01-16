@@ -53,7 +53,7 @@ def find_random():
 
 
 @bp.route("/v1/find/<img_name>", methods=["GET"])
-def find_by_name(img_name):
+def find_by_name(img_name):  # TODO: add regex to search
 
     if os.path.exists(f"{image_path}{img_name}/image.jpg"):
         img_data = find_img_date(img_name)
