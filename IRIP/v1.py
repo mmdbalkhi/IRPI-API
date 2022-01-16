@@ -27,7 +27,7 @@ def find_img_date(img_name: str) -> Dict:
     try:
         with open(f"{path}/info.json") as file:
             return json_load(file)
-    except ValueError:
+    except FileNotFoundError:
         return
 
 
