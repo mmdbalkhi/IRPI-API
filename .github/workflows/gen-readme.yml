@@ -4,13 +4,13 @@ on:
     branches:
       - main
     paths:
-      - 'IRIP/img/*'
+      - 'IRIP/img/*/*'
 
   pull_request:
     branches:
       - main
     paths:
-      - 'IRIP/img/*'
+      - 'IRIP/img/*/*'
 
 jobs:
 

@@ -5,15 +5,15 @@ on:
       - main
     paths:
       - "IRIP/*.py"
-      - "docs/"
-      - "tests/"
+      - "docs/*"
+      - "tests/*.py"
   pull_request:
     branches:
       - main
     paths:
       - "IRIP/*.py"
-      - "docs/"
-      - "tests/"
+      - "docs/*"
+      - "tests/*.py"
 
 jobs:
   test_all_packages:
