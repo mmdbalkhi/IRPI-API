@@ -18,8 +18,8 @@ def generate_img_table(img_dir=None) -> str:
     output = """
 ## Photos
 
-| Name | Location | Photographer | sender | description | view  |
-|------|----------|--------------|--------|-------------|-------|
+| Name | Location | Photographer | source | description | view  |
+|------|----------|---------|--------|---------------------------|-------|
 """
     items = listdir(img_dir)
     items.sort()
@@ -37,7 +37,7 @@ def generate_img_table(img_dir=None) -> str:
                 output += f'| {json_file["name"]} |'
                 output += f' {json_file["location"]} |'
                 output += f' {json_file["photographer"]} |'
-                output += f' {json_file["sender"]} |'
+                output += f' {json_file["source"]} |'
                 output += f' {json_file["description"]} |'
                 output += f' <a href= "{img_path}">\
 <img src="{img_path}" sizes="32x32"> </a> |'
