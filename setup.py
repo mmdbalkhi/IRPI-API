@@ -11,4 +11,4 @@ if sys.version_info < (3, 6, 0):
         "for installation instructions."
     )
 
-setup()
+setup(install_requires=["flask"])
