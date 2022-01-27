@@ -11,6 +11,8 @@
 """
 from flask import Flask
 
+from IRIP import v1
+
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -26,9 +28,6 @@ def create_app(test_config=None):
     else:
         # load the test config if passed in
         app.config.update(test_config)
-
-    # apply the blueprints to the app
-    from IRIP import v1
 
     app.register_blueprint(v1.bp)
 
