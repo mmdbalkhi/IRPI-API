@@ -27,27 +27,27 @@ $ . env/bin/activate
 then install requirements:
 
 ```sh
-$ pip install -r requirements/requirements.txt
 $ pip install -e .
 ```
 
 and run the app:
 
-- bash
+### bash
 
 ```sh
 $ export FLASK_APP=src/main.py
 $ flask run
 ```
 
-- cmd
+### cmd
 
 ```cmd
 > set FLASK_APP=hello
 > flask run
 ```
 
-- powershell
+### powershell
+
 ```
 > $env:FLASK_APP = "hello"
 > flask run
