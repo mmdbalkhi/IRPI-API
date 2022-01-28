@@ -1,0 +1,27 @@
+import os
+from json import load as json_load
+
+from .typying import Dict
+
+image_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
+
+
+def find_img_date(img_name: str) -> Dict:
+    """find image data from json file in the image Directory
+
+    Args:
+        img_name (str): name of the img
+
+    Returns:
+        Dict: the json data from the file
+    """
+    path = f"{image_path}{img_name}"
+    try:
+        with open(f"{path}/info.json", encoding="utf-8") as file:
+            return json_load(file)
+    except FileNotFoundError:
+        return
+
+
+def search_with_regex():
+    pass
