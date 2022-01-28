@@ -1,5 +1,19 @@
 name: Workflow for Codecov IRIP
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "IRIP/*.py"
+      - "docs/*"
+      - "tests/*.py"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "IRIP/*.py"
+      - "docs/*"
+      - "tests/*.py"
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -15,6 +29,9 @@ jobs:
       - name: Run tests and collect coverage
         run: |
           coverage run -m pytest
-          coverage html
+          coverage xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
