@@ -2,7 +2,7 @@ from flask import Flask
 
 from IRIP import v1
 
-from .typying import Callable
+from .typing import Callable
 
 
 def create_app(test_config=None) -> Callable:

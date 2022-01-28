@@ -1,7 +1,7 @@
 import os
 from json import load as json_load
 
-from .typying import Dict
+from .typing import Dict
 
 image_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
 
