@@ -1,4 +1,4 @@
-from IRIP import create_app
+from IRIP.create_app import create_app
 
 
 def test_config():
