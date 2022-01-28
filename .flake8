@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 91
+select = C,E,F,W,B,B9
+ignore = F401, E501, W503
+exclude = __init__.py
