@@ -1,4 +1,4 @@
-name: Test all packages (slow)
+name: Test
 on:
   push:
     branches:

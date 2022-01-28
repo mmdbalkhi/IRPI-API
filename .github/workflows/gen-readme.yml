@@ -5,12 +5,14 @@ on:
       - main
     paths:
       - 'IRIP/img/*/*'
-
+      - 'auto-gen.py'
   pull_request:
     branches:
       - main
     paths:
       - 'IRIP/img/*/*'
+      - 'auto-gen.py'
+
 
 jobs:
 
