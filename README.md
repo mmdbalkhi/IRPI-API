@@ -1,5 +1,12 @@
 <!-- auto generated dont edit-->
 
+<div align="center">
+
+[![codecov](https://codecov.io/gh/mmdbalkhi/IRPI-API/branch/main/graph/badge.svg?token=t4lclUtmvC)](https://codecov.io/gh/mmdbalkhi/IRPI-API)
+[![Test](https://github.com/mmdbalkhi/IRPI-API/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/mmdbalkhi/IRPI-API/actions/workflows/test.yml)
+
+</div>
+
 # IRPI API
 
 > IRan Place Img API
