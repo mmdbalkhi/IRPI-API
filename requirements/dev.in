@@ -1,6 +1,6 @@
 -r requirements.in
 -r docs.in
--r test.in
+-r tests.in
 pip-tools
 pre-commit
 tox
