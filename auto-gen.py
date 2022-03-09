@@ -80,7 +80,7 @@ $ . env/bin/activate
 
 ```batch
 > py -3 -m venv env
-> env\\Scripts\activate
+> env\Scriptsctivate
 ```
 
 then install requirements:
@@ -94,21 +94,21 @@ and run the app:
 ### bash
 
 ```sh
-$ export FLASK_APP=src/main.py
+$ export FLASK_APP=IRIP/main.py
 $ flask run
 ```
 
 ### cmd
 
 ```cmd
-> set FLASK_APP=hello
+> set FLASK_APP=IRIP/main.py
 > flask run
 ```
 
 ### powershell
 
 ```
-> $env:FLASK_APP = "hello"
+> $env:FLASK_APP = "IRIP/main.py"
 > flask run
 ```
 
