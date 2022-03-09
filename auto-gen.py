@@ -50,7 +50,7 @@ def generate_img_table(img_dir=None) -> str:
     return output
 
 
-readme = """<!-- auto generated dont edit-->
+readme = r"""<!-- auto generated dont edit-->
 
 <div align="center">
 
