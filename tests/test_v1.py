@@ -1,11 +1,11 @@
 import json
 
+import pytest
+
 from IRIP import create_app
 
-client = create_app().test_client()
 
-
-def test_find_random():
+def test_find_random(client):
 
     response = json.loads(client.get("/v1/random").data)
 
@@ -13,7 +13,7 @@ def test_find_random():
     assert response["status"] == "ok"
 
 
-def test_find_by_name_404():
+def test_find_by_name_404(client):
 
     response = json.loads(client.get("/v1/find/example").data)
 
@@ -22,7 +22,7 @@ def test_find_by_name_404():
     assert response["msg"] == "img not exists"
 
 
-def test_find_by_name_200():
+def test_find_by_name_200(client):
 
     response = json.loads(client.get("/v1/find/azadi_tower").data)
 

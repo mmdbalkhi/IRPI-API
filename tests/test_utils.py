@@ -1,4 +1,5 @@
-from IRIP.utils import find_img_date, search_with_regex
+from IRIP.utils import find_img_date
+from IRIP.utils import search_with_regex
 
 
 def test_find_img_date():
