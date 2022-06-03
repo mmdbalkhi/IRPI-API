@@ -12,21 +12,25 @@ on:
     paths:
       - "IRIP/img/**"
       - "auto-gen.py"
-
+  workflow_dispatch:
 jobs:
-  add-actions:
+  tests:
+    name: 🤖 Generate Readme
     runs-on: ubuntu-latest
     steps:
-      - name: Add Actions 🚀
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3 🐍
+        uses: actions/setup-python@v3
         with:
           python-version: "3.10"
+
       - name: 🔧 config git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      - name: ⚡ gen readme
+      - name: ⚡ Generate readme
         run: python auto-gen.py
       - name: 💾 commit
         run: |
