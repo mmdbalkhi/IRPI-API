@@ -1,0 +1,34 @@
+name: Auto Generate Readme
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "IRIP/img/**"
+      - "auto-gen.py"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "IRIP/img/**"
+      - "auto-gen.py"
+
+jobs:
+  add-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Actions 🚀
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: 🔧 config git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: ⚡ gen readme
+        run: python auto-gen.py
+      - name: 💾 commit
+        run: |
+          git add README.md
+          git commit -m "auto generate README.md" && git push || echo "nothing to commit, working tree clean"
