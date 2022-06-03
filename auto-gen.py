@@ -61,7 +61,7 @@ readme = r"""<!-- auto generated dont edit-->
 
 # IRPI API
 
-> __**IR**__AN __**P**__LECE __**I**__MAGE __**API**__
+> **IR**AN **P** LECE **I** MAGE **API**
 
 IRPI is a RESTful API. you can download Iran's beautiful Places image.
 
