@@ -1,8 +1,10 @@
 from flask import Flask
-
-from IRIP import v1
+from flask import jsonify
+from flask import Response
 
 from .typing import Callable
+from .typing import Tuple
+from IRIP import v1
 
 
 def create_app(test_config=None) -> Callable:
@@ -26,6 +28,21 @@ def create_app(test_config=None) -> Callable:
     else:
         # load the test config if passed in
         app.config.update(test_config)
+
+    @app.errorhandler(500)  # pragma: no cover
+    def internal_server_error(e: int) -> Tuple[Response, int]:
+        """handle 500 http error
+
+        Args:
+            e (int): http error from the server
+
+        Returns:
+            Json: error details
+        """
+        return (
+            jsonify({"status": "failed", "msg": "500 Internal Server Error"}),
+            e,
+        )
 
     app.register_blueprint(v1.bp)
 
