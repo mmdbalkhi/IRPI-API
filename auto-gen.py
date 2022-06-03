@@ -61,7 +61,7 @@ readme = r"""<!-- auto generated dont edit-->
 
 # IRPI API
 
-> IRan Place Img API
+> __**IR**__AN __**P**__LECE __**I**__MAGE __**API**__
 
 IRPI is a RESTful API. you can download Iran's beautiful Places image.
 
@@ -80,7 +80,7 @@ $ . env/bin/activate
 
 ```batch
 > py -3 -m venv env
-> env\Scriptsctivate
+> env\Scripts\activate
 ```
 
 then install requirements:
