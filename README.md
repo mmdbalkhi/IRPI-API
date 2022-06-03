@@ -9,7 +9,7 @@
 
 # IRPI API
 
-> **IR**AN **P** LECE **I** MAGE **API**
+> **IR**AN **P**LECE **I**MAGE **API**
 
 IRPI is a RESTful API. you can download Iran's beautiful Places image.
 
