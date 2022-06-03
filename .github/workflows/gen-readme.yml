@@ -4,30 +4,26 @@ on:
     branches:
       - main
     paths:
-      - 'IRIP/img/*/*'
-      - 'auto-gen.py'
+      - "IRIP/img/**"
+      - "auto-gen.py"
   pull_request:
     branches:
       - main
     paths:
-      - 'IRIP/img/*/*'
-      - 'auto-gen.py'
-
+      - "IRIP/img/**"
+      - "auto-gen.py"
 
 jobs:
-
   add-actions:
     name: gen-readme
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
           python-version: "3.10"
-
-      - run: git config --global user.name "readme-gen"
-      - run: git config --global user.email "<>"
+      - run: git config --global user.name "github-actions[bot]"
+      - run: git config --global user.email "github-actions[bot]@users.noreply.github.com"
       - run: python auto-gen.py
       - run: git add README.md
-      - run: git commit -m "auto generate README.md" || echo "nothing to commit, working tree clean"; exit 0
-      - run: git push
+      - run: git commit -m "auto generate README.md" && git push || echo "nothing to commit, working tree clean"
