@@ -9,7 +9,7 @@
 
 # IRPI API
 
-> __**IR**__AN __**P**__LECE __**I**__MAGE __**API**__
+> **IR**AN **P** LECE **I** MAGE **API**
 
 IRPI is a RESTful API. you can download Iran's beautiful Places image.
 
@@ -105,6 +105,13 @@ $ curl IRPI.com/v1/find/example
   "status": "ok"
 }
 ```
+
+## TODO:
+
+- [ ] Add more images
+- [ ] use flask-restful or etc
+- [ ] add more features
+
 
 ## Photos
 
