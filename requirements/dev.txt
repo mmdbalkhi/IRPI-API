@@ -118,7 +118,7 @@ toml==0.10.2
     #   tox
 tomli==2.0.0
     # via pep517
-tox==3.24.5
+tox==3.25.1
     # via -r requirements/dev.in
 urllib3==1.26.8
     # via requests
