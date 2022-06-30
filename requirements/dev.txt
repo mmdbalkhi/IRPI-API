@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-asgiref==3.4.1
+asgiref==3.5.2
     # via -r requirements/tests.in
 attrs==21.4.0
     # via pytest
@@ -24,7 +24,7 @@ click==8.0.3
     # via
     #   flask
     #   pip-tools
-coverage==6.3
+coverage==6.4.1
     # via -r requirements/tests.in
 distlib==0.3.4
     # via virtualenv
@@ -71,7 +71,7 @@ pluggy==1.0.0
     # via
     #   pytest
     #   tox
-pre-commit==2.16.0
+pre-commit==2.19.0
     # via -r requirements/dev.in
 py==1.11.0
     # via
