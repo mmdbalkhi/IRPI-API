@@ -83,7 +83,7 @@ pyparsing==3.0.6
     # via packaging
 pytest==6.2.5
     # via -r requirements/tests.in
-python-dotenv==0.19.2
+python-dotenv==0.20.0
     # via -r requirements/tests.in
 pytz==2021.3
     # via babel
