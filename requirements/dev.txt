@@ -24,7 +24,7 @@ click==8.0.3
     # via
     #   flask
     #   pip-tools
-coverage==6.4.1
+coverage==6.4.2
     # via -r requirements/tests.in
 distlib==0.3.4
     # via virtualenv
