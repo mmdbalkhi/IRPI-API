@@ -32,6 +32,8 @@ distlib==0.3.4
     # via virtualenv
 docutils==0.17.1
     # via sphinx
+exceptiongroup==1.0.0
+    # via pytest
 filelock==3.4.2
     # via
     #   tox
@@ -77,14 +79,12 @@ pluggy==1.0.0
 pre-commit==2.20.0
     # via -r requirements/dev.in
 py==1.11.0
-    # via
-    #   pytest
-    #   tox
+    # via tox
 pygments==2.11.2
     # via sphinx
 pyparsing==3.0.6
     # via packaging
-pytest==7.1.3
+pytest==7.2.0
     # via -r requirements/tests.in
 python-dotenv==0.21.0
     # via -r requirements/tests.in
