@@ -10,7 +10,7 @@ attrs==21.4.0
     # via pytest
 blinker==1.5
     # via -r requirements/tests.in
-coverage==6.5.0
+coverage==7.0.1
     # via -r requirements/tests.in
 exceptiongroup==1.0.0
     # via pytest
