@@ -56,8 +56,10 @@ jinja2==3.0.3
     # via
     #   flask
     #   sphinx
-markupsafe==2.0.1
-    # via jinja2
+markupsafe==2.1.2
+    # via
+    #   jinja2
+    #   werkzeug
 nodeenv==1.6.0
     # via pre-commit
 packaging==21.3
@@ -131,7 +133,7 @@ virtualenv==20.13.0
     # via
     #   pre-commit
     #   tox
-werkzeug==2.0.2
+werkzeug==2.2.3
     # via flask
 wheel==0.38.1
     # via pip-tools
